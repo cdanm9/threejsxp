@@ -1,6 +1,6 @@
 import {createCamera} from './components/camera.js';
 import {createCube} from './components/cube.js';
-import {createCube2} from './components/cube2.js';
+import {createCuboid} from './components/cuboid.js';
 import {createCube3} from './components/cube3.js';
 import {createLights} from './components/lights.js';
 import {createScene} from './components/scene.js';
@@ -19,7 +19,7 @@ class World{
         container.append(renderer.domElement)
 
         const cube=createCube(-4,0,0);
-        const cube2=createCube2(0,0,0);
+        const cube2=createCuboid(0,0,0);
         const cube3=createCube3(4,0,0);
         const lights=createLights()
         scene.add(cube,lights)

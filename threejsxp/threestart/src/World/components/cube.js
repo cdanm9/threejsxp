@@ -1,4 +1,4 @@
-import {MeshStandardMaterial,BoxGeometry,ConeGeometry,Triangle,BoxBufferGeometry,Mesh,MeshBasicMaterial,CircleGeometry,TorusGeometry,SphereGeometry} from 'three';
+import {MeshToonMaterial,MeshPhysicalMaterial,MeshPhongMaterial,MeshNormalMaterial,MeshMatcapMaterial,MeshLambertMaterial,MeshDepthMaterial,MeshStandardMaterial,BoxGeometry,ConeGeometry,Triangle,BoxBufferGeometry,Mesh,MeshBasicMaterial,CircleGeometry,TorusGeometry,SphereGeometry} from 'three';
 function createCube(pos1,pos2,pos3){
     const geometry=new BoxBufferGeometry(2,2,2)
     // const geometry=new CircleGeometry(2,30,6)             //Circle 
@@ -10,7 +10,15 @@ function createCube(pos1,pos2,pos3){
     // const material=new MeshBasicMaterial({color:'purple'});
     // const spec={color:'purple'}
     // const material=new MeshStandardMaterial(spec);
-    const material=new MeshStandardMaterial({color:'purple'});
+    // const material=new MeshLambertMaterial({color:'purple'});
+    // const material=new MeshMatcapMaterial({color:'purple'});
+    // const material=new MeshNormalMaterial({color:'purple'});
+    // const material=new MeshPhongMaterial({color:'purple'});
+    // const material=new MeshPhysicalMaterial({color:'purple'});
+    // const material=new MeshToonMaterial({color:'purple'});
+    const material=new MeshStandardMaterial ({color:'purple'});
+    // const material=new MeshStandardMaterial({color:'purple'});
+    // const material=new MeshDepthMaterial();
     // const material=new MeshBasicMaterial({color:'red',fog:true,wireframe:true,vertexColors:true});
     const cube=new Mesh(geometry,material)
     cube.position.set(pos1,pos2,pos3)
