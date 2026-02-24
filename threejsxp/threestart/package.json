@@ -10,9 +10,13 @@
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
+    "dev": "vite",
     "test": "npx vite"
   },
   "dependencies": {
     "three": "^0.132.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
   }
 }
