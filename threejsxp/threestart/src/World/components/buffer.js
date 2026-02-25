@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-function createCube3(pos1,pos2,pos3){
+function createBuffer(pos1,pos2,pos3){
     const geometry = new THREE.BufferGeometry();
     // create a simple square shape. We duplicate the top left and bottom right
     // vertices because each vertex needs to appear once per triangle.
@@ -19,4 +19,4 @@ function createCube3(pos1,pos2,pos3){
     return mesh;
 }
 
-export {createCube3};
+export {createBuffer};
