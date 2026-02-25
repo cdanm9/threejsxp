@@ -7,7 +7,7 @@ function main(){
     // console.log(world.camera)
     // console.log(world.scene)
     // console.log(world.renderer)
-    world.render()
+    world.start()
     // const oButton=document.querySelector('#start-button')
     // oButton.addEventListener('click',onButtonClick)
 }

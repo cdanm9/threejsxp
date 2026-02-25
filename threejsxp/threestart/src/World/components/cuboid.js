@@ -1,4 +1,4 @@
-import {BoxGeometry,ConeGeometry,BoxBufferGeometry,Mesh,MeshBasicMaterial,CircleGeometry,TorusGeometry,SphereGeometry, Plane, PlaneGeometry} from 'three';
+import {BoxGeometry,ConeGeometry,Mesh,MeshBasicMaterial,CircleGeometry,TorusGeometry,SphereGeometry, Plane, PlaneGeometry} from 'three';
 function createCuboid(pos1,pos2,pos3){
     const geometry=new BoxGeometry(1,2,1)    
     const material=new MeshBasicMaterial({color:'blue'});

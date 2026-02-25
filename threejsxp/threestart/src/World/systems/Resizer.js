@@ -1,7 +1,9 @@
 function setSize(container,camera,renderer){
     camera.aspect=container.clientWidth/container.clientHeight;
+    // camera.aspect=64/64;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth,container.clientHeight)
+    // renderer.setSize(256,256)
     renderer.setPixelRatio(window.devicePixelRatio);
 }
 
@@ -10,12 +12,12 @@ class Resizer{
         setSize(container,camera,renderer)
         window.addEventListener('resize',()=>{
             setSize(container,camera,renderer)
-            this.onResize()
+            // this.onResize()
         })
         
     }
-    onResize(){
+    // onResize(){
         
-    }
+    // }
 }
 export {Resizer};

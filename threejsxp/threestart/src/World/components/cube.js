@@ -1,4 +1,5 @@
-import {MeshToonMaterial,MeshPhysicalMaterial,MeshPhongMaterial,MeshNormalMaterial,MeshMatcapMaterial,MeshLambertMaterial,MeshDepthMaterial,MeshStandardMaterial,BoxGeometry,ConeGeometry,Triangle,BoxBufferGeometry,Mesh,MeshBasicMaterial,CircleGeometry,TorusGeometry,SphereGeometry} from 'three';
+import {MeshToonMaterial,MeshPhysicalMaterial,MeshPhongMaterial,MeshNormalMaterial,MeshMatcapMaterial,MeshLambertMaterial,MeshDepthMaterial,MeshStandardMaterial,BoxGeometry,ConeGeometry,Triangle,Mesh,MeshBasicMaterial,CircleGeometry,TorusGeometry,SphereGeometry,MathUtils} from 'three';
+
 function createCube(pos1,pos2,pos3){
     const geometry=new BoxGeometry(2,2,2)
     // const geometry=new CircleGeometry(2,30,6)             //Circle 
@@ -22,8 +23,24 @@ function createCube(pos1,pos2,pos3){
     // const material=new MeshBasicMaterial({color:'red',fog:true,wireframe:true,vertexColors:true});
     const cube=new Mesh(geometry,material)
     cube.position.set(pos1,pos2,pos3)
+    // cube.position.set(pos1,pos2,pos3)
     // cube.rotation.set(-0.5,-0.5,0.8)
+    // cube.position.set(-3.9,0.095,0)
     // cube.rotation.set(-0.5,-0.1,0.8)
+    const radiansPerSecond=MathUtils.degToRad(30)
+    // cube.rotation.set(0,0,radiansPerSecond)
+    cube.rotation.set(-0.5, -0.1, 0.8);
+
+
+    cube.tick=(delta)=>{
+        cube.rotation.z+=radiansPerSecond*delta
+        cube.rotation.x+=radiansPerSecond*delta
+        cube.rotation.y+=radiansPerSecond*delta
+    }
+    // cube.scale.set(2,2,2)
     return cube;
+
+
+    
 }
 export {createCube};
