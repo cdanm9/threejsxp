@@ -21,6 +21,9 @@ class Loop{
   tick(){
     timer.update();
     let delta=timer.getDelta()
+    console.log(
+      `The last frame rendered in ${delta * 1000} milliseconds`,
+    );
     for(const object of this.updatables){
       object.tick(delta)
     }

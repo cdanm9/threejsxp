@@ -27,15 +27,34 @@ function createCube(pos1,pos2,pos3){
     // cube.rotation.set(-0.5,-0.5,0.8)
     // cube.position.set(-3.9,0.095,0)
     // cube.rotation.set(-0.5,-0.1,0.8)
-    const radiansPerSecond=MathUtils.degToRad(30)
+    // const radiansPerSecond=MathUtils.degToRad(3.6)
+    const radiansPerSecond=MathUtils.degToRad(3.6)
+    const radiansy=MathUtils.degToRad(45)
+    const radiansx=MathUtils.degToRad(30)
     // cube.rotation.set(0,0,radiansPerSecond)
-    cube.rotation.set(-0.5, -0.1, 0.8);
+    cube.rotation.set(radiansx, -radiansy, 0);
+    // let i=4,j=1
 
 
     cube.tick=(delta)=>{
+        // console.log(delta)
         cube.rotation.z+=radiansPerSecond*delta
-        cube.rotation.x+=radiansPerSecond*delta
-        cube.rotation.y+=radiansPerSecond*delta
+        // let pos
+        // if(Math.round(Math.random()*10)%2==0){
+        //     i=i+0.01;j=j+0.01
+        //     // cube.position.set(i,0,0)
+        //     cube.scale.set(j,j,j)
+        // }else{
+        //     console.log(pos)
+        //     i=i-0.01;j=j-0.01
+        //     // pos=Math.random()
+        //     cube.position.set(i,0,0)
+        //     cube.scale.set(j,j,j)
+        // }
+        // cube.rotation.x+=radiansPerSecond*delta
+        // cube.rotation.y+=radiansPerSecond*delta
+        
+        // console.log(radiansPerSecond*delta)
     }
     // cube.scale.set(2,2,2)
     return cube;

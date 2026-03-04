@@ -16,6 +16,16 @@ function createLights(){
 
     // RectAreaLightUniformsLib.init()
     // const intensity=8
+
+
+    light.tick=function(){
+        // light.position.x+=1
+        // light.position.y+=1
+        // light.position.y-=1
+        // light.position.x-=1
+        // light.position.z+=1
+        // light.position.z-=1
+    }
     return light;
 }
 export{createLights}

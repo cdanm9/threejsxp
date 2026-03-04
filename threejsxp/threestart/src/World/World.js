@@ -22,14 +22,14 @@ class World {
 
         container.append(renderer.domElement);
 
-        const cube = createCube(-4, 0, 0);
-        const cuboid = createCuboid(0, 0, 0);
+        const cube = createCube(0, 0, 0);
+        const cuboid = createCuboid(-6, 0, 0);
         const buffer = createBuffer(4, 0, 0);
         const minicube = createMiniCube(1.5,0, 0)
         cube.add(minicube);
         const lights = createLights();
         
-        loop.updatables.push(cube)
+        loop.updatables.push(cube,camera,lights,cuboid)
         
         scene.add(cube, lights);
         scene.add(cuboid);
